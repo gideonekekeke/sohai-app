@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
-import Text from "../src/components/Test";
+// import Text from "../src/components/Test";
+import Form from "../src/components/SignUpForm/SignUp";
 import Dashboard from "../src/components/Dashboard/Dashboard";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <div>
       <Router>
         <Switch>
-          <Route path="/" exact component={Text} />
+          {/* <Route path="/" exact component={Text} /> */}
+          <Route path="/" exact component={Form} />
           <Route path="/Dashboard" component={Dashboard} />
         </Switch>
       </Router>
