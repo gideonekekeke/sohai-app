@@ -1,17 +1,28 @@
 .componentWrapper{
     background-color: red;
     display: flex;
-    padding-top: 10px;
 }
 
 .leftNav{
-
+    background-color:gold;
+    width: 450px;
+    display: flex;
+    justify-content: center;
 }
 
 .middleNav{
-
+    background-color: tomato;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    padding: 5px;
 }
 
 .rightNav{
-
+    background-color:green;
+    width: 450px;
+    display: flex;
+    justify-content: center;
 }
