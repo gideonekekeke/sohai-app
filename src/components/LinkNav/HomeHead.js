@@ -140,8 +140,6 @@ function HomeHead() {
         </div>
       </div>
       <br />
-      <br />
-      <br />
       <div className="feedsContents">
         {homeBtn ? (
           <div>
