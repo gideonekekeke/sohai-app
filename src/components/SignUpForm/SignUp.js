@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "antd/dist/antd.css";
+import { GlobalContext } from "../AuthState/GlobalContext";
 import { Button, Input } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import { app } from "../Base/Base";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import "./SignUp.css";
 import signImg from "../Image/socialteen.svg";
 
 const db = app.firestore().collection("Users");
 function SignUp() {
   const hist = useHistory();
-  // const [open, setOpen] = useState(false)
+  // setting the user presence
+  // const { current, currentData } = useContext(GlobalContext);
+  // setting the user state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -21,11 +24,13 @@ function SignUp() {
   const [bio, setBio] = useState("");
   const [hasAccount, setHasAccount] = useState(false);
 
+  // function to clear errors
   const clearErrors = () => {
     setEmailError("");
     setPasswordError("");
   };
 
+  // Sign-up function
   const SignUP = async () => {
     clearErrors();
     const newUser = await app
@@ -44,22 +49,19 @@ function SignUp() {
         }
       });
     if (newUser) {
-      await db
-        .doc(newUser.user.uid)
-        // .collection("HouseAgent")
-        // .doc()
-        .set({
-          name,
-          email,
-          password,
-          userName,
-          Photo: await image1,
-          bio,
-        });
+      await db.doc(newUser.user.uid).set({
+        name,
+        email,
+        password,
+        userName,
+        Photo: await image1,
+        bio,
+      });
       hist.push("/Dashboard");
     }
   };
 
+  // Sign-in function
   const SignIN = async () => {
     clearErrors();
     const User = await app
@@ -78,12 +80,12 @@ function SignUp() {
       });
 
     if (User) {
-      alert("Welcome");
       hist.push("/dashboard");
       window.location.reload(true);
     }
   };
 
+  // upload image function
   const ImageUrl = async (e) => {
     const file = e.target.files[0];
     const store = app.storage().ref();
@@ -213,7 +215,7 @@ function SignUp() {
                   alignItems: "center",
                 }}
               >
-                <div style={{ color: "#000", fontWeight: "600" }}>UserName</div>
+                <div style={{ color: "#000", fontWeight: "600" }}>Email</div>
                 <Input
                   style={{ width: "280px" }}
                   className="InputDiv"

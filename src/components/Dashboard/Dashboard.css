@@ -4,14 +4,14 @@
 }
 
 .leftNav{
-    background-color:gold;
-    width: 450px;
+    background-color:rgb(240, 240, 240);
+    width: 550px;
     display: flex;
     justify-content: center;
 }
 
 .middleNav{
-    background-color: tomato;
+    background-color: white;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -21,8 +21,8 @@
 }
 
 .rightNav{
-    background-color:green;
-    width: 450px;
+    background-color:rgb(240, 240, 240);
+    width: 550px;
     display: flex;
     justify-content: center;
 }
