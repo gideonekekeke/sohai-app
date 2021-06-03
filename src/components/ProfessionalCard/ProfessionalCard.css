@@ -1,0 +1,23 @@
+.profesionalParent{
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+}
+
+.thePro {
+    width: 300px;
+    /* background-color: lightgray; */
+    margin: 10px;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+.thePro_holder {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+  align-items: center; */
+    /* margin: 5px; */
+}

@@ -1,5 +1,5 @@
 .componentWrapper{
-    background-color: red;
+    /* background-color: red; */
     display: flex;
 }
 
@@ -7,7 +7,13 @@
     background-color:rgb(240, 240, 240);
     width: 550px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+@media screen and (max-width: 960px){
+    .leftNav{
+        display: none;
+    }
 }
 
 .middleNav{
@@ -19,10 +25,47 @@
     align-items: center;
     padding: 5px;
 }
+@media screen and (max-width: 960px) {
+    .middleNav {
+        width: 450px;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .middleNav {
+        width: 400px;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 425px) {
+    .middleNav {
+        width: 350px;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 375px) {
+    .middleNav {
+        width: 300px;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 320px) {
+    .middleNav {
+        width: 300px;
+        justify-content: center;
+    }
+}
+
 
 .rightNav{
     background-color:rgb(240, 240, 240);
     width: 550px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+@media screen and (max-width: 960px) {
+    .rightNav {
+        display: none;
+    }
 }

@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
 import "antd/dist/antd.css";
-import { GlobalContext } from "../AuthState/GlobalContext";
+// import { GlobalContext } from "../AuthState/GlobalContext";
 import { Button, Input } from "antd";
 import TextArea from "antd/lib/input/TextArea";
 import { app } from "../Base/Base";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./SignUp.css";
 import signImg from "../Image/socialteen.svg";
 
@@ -81,7 +81,7 @@ function SignUp() {
 
     if (User) {
       hist.push("/dashboard");
-      window.location.reload(true);
+      // window.location.reload();
     }
   };
 
@@ -242,7 +242,9 @@ function SignUp() {
                   {passwordError}{" "}
                 </p>
                 <Button
-                  onClick={SignIN}
+                  onClick={() => {
+                    SignIN();
+                  }}
                   style={{
                     color: "#fff",
                     fontWeight: "bold",

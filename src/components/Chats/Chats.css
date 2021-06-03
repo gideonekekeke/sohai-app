@@ -1,4 +1,10 @@
 .chatContainer{
     background-color: pink;
     padding: 10px;
+    /* width: 642px; */
 }
+/* @media screen and (max-width: 960px) {
+    .chatContainer {
+        width: 450px;
+    }
+} */
