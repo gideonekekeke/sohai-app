@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Chats from "../Chats/Chats";
 import Homes from "../Home/Home";
 import Notification from "../Alerts/Alerts";
+import SignOut from "../SignOutForm/SignOut";
 
 function HomeHead() {
   const [homeBtn, setHomeBtn] = useState(true);
@@ -39,11 +40,13 @@ function HomeHead() {
 
   return (
     <div
+      className="feedContainer"
       style={{
         justifyContent: "center",
         flex: 1,
         width: "100%",
         padding: "10px",
+        // backgroundColor: "brown",
       }}
     >
       <div
@@ -57,6 +60,7 @@ function HomeHead() {
           alignItems: "center",
           border: "1px solid #fbd2d7",
           borderRadius: "5px",
+          // backgroundColor: "green",
         }}
       >
         <div className="first">
@@ -144,6 +148,7 @@ function HomeHead() {
         {homeBtn ? (
           <div>
             <div>Home Feeds</div>
+            <SignOut />
             <Homes />
           </div>
         ) : chatBtn ? (

@@ -2,4 +2,22 @@
     background-color: white;
     padding: 10px;
     border-radius: 4px;
+    /* width: 600px; */
 }
+
+/* @media screen and (max-width: 425px){
+    .homeContainer{
+        width: 60%;
+    }
+} */
+/* @media screen and (max-width: 375px) {
+    .homeContainer {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .homeContainer {
+        width: 38%;
+    }
+} */

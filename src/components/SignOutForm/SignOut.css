@@ -1,0 +1,43 @@
+.signoutWrapper{
+    display: flex;
+}
+.signoutImageContainer{
+
+}
+
+.signoutTextContainer{
+    /* background-color: aqua; */
+    margin-left: 5px;
+    display: flex;
+}
+
+.signoutText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orangered;
+    position: relative;
+    /* box-shadow: black; */
+}
+.signoutContainer {
+    background-color: rgb(199, 199, 199);
+    width: 30px;
+    height: 30px;
+    border-radius: 1000px;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    left: -20px;
+    box-shadow: black;
+}
+.lockIcon{
+
+}
+
+.signoutName{
+    position: relative;
+    top: 25px;
+    left: -15px;
+    font-weight: bold;
+}
