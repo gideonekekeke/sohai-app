@@ -4,6 +4,7 @@ import pic3 from "../../img/3.jpg";
 import { Button } from "antd";
 import "./ProfessionalCard.css";
 import { app } from "../Base/Base";
+import ProffesionalMessage from "../ProffessionalMessage/ProffesionalMessage";
 
 const GetBase = app.firestore().collection("Profesional");
 function ProfesionalCard() {
@@ -24,8 +25,8 @@ function ProfesionalCard() {
   }, []);
   return (
     <div className="profesionalParent">
-      {getFiles.map((files) => (
-        <div key={files.id} className="thePro">
+      {getFiles.map(({ id, avatar, cover, decs }) => (
+        <div key={id} className="thePro">
           <div className="thePro_holder">
             <div
               style={{
@@ -35,7 +36,7 @@ function ProfesionalCard() {
               }}
             >
               <img
-                src={files.cover}
+                src={cover}
                 style={{
                   height: "100%",
                   width: "100%",
@@ -64,7 +65,7 @@ function ProfesionalCard() {
                 }}
               >
                 <img
-                  src={files.avatar}
+                  src={avatar}
                   style={{
                     height: "100%",
                     width: "100%",
@@ -77,21 +78,11 @@ function ProfesionalCard() {
                 />
               </div>
 
-              <Button
-                style={{
-                  height: "30px",
-                  marginTop: "5px",
-                  background: "none",
-                  border: "2px solid lightblue",
-                  cursor: "pointer",
-                }}
-              >
-                Message
-              </Button>
+              <ProffesionalMessage id={id} />
             </div>
             <div style={{ margin: "10px", width: "95%", marginTop: "-30px" }}>
               {" "}
-              {files.decs}
+              {decs}
               {/* Let's help you pick from our pool of verified, highly qualified,
               ready-to-work teachers to fill that teaching role. */}
             </div>
